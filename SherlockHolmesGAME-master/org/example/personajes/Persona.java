@@ -1,5 +1,3 @@
-package org.example;
-
 public class Persona {
     private String name;
     private int edad;
@@ -7,6 +5,15 @@ public class Persona {
     private String oficio;
     private String direccion;
     private boolean vivo;
+
+    public Persona(String name, int edad, double altura, String oficio, String direccion, boolean vivo) {
+        this.name = name;
+        this.edad = edad;
+        this.altura = altura;
+        this.oficio = oficio;
+        this.direccion = direccion;
+        this.vivo = vivo;
+    }
 
     public boolean isVivo() {
         return vivo;

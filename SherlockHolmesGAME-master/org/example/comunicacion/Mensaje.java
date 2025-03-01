@@ -1,6 +1,6 @@
 package org.example.Objetos.Telefono;
 
-import org.example.Persona;
+import org.example.personajes.Persona;
 
 import java.util.Date;
 

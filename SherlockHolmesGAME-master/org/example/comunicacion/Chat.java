@@ -1,11 +1,10 @@
 package org.example.Objetos.Telefono;
-
-import org.example.Persona;
+import org.example.personajes.Persona;
 
 import java.util.List;
 
-public class Llamada {
-    private List<Mensaje> conversacion;
+public class Chat {
     private Persona personaA;
     private Persona personaB;
+    private List<Mensaje> mensajes;
 }
