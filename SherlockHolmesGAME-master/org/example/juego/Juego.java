@@ -4,11 +4,11 @@ import org.example.casos.Caso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Game {
+public class Juego {
     private List<Caso> casos;
     private int casoActual;
 
-    public Game() {
+    public Juego() {
         this.casos = new ArrayList<>();
         this.casoActual = 0;
 
