@@ -1,11 +1,17 @@
-package org.example.Objetos.Telefono;
-
-import org.example.personajes.Persona;
+package org.example.comunicacion;
 
 import java.util.Date;
 
 public class Mensaje {
-    private Date fecha;
-    private Persona emisor;
     private String contenido;
+    private Date fecha;
+
+    public Mensaje(String contenido, Date fecha) {
+        this.contenido = contenido;
+        this.fecha = fecha;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
 }

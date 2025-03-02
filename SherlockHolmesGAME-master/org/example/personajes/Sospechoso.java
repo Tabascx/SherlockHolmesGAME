@@ -1,18 +1,34 @@
+package org.example.personajes;
+
+import org.example.casos.Pista;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Sospechoso extends Persona {
-    private boolean esCulpable;
-    private String coartada;
+    private boolean culpable;
+    private List<Pista> pistasRelacionadas;
 
-    public Sospechoso(String name, int edad, double altura, String oficio, String direccion, boolean vivo, boolean esCulpable, String coartada) {
-        super(name, edad, altura, oficio, direccion, vivo);
-        this.esCulpable = esCulpable;
-        this.coartada = coartada;
+    public Sospechoso(String nombre, int edad, double altura, String oficio, String direccion, boolean vivo, boolean culpable) {
+        super(nombre, edad, altura, oficio, direccion, vivo);
+        this.culpable = culpable;
+        this.pistasRelacionadas = new ArrayList<>();
     }
 
-    public boolean esCulpable() {
-        return esCulpable;
+    // Getters y Setters
+    public boolean isCulpable() {
+        return culpable;
     }
 
-    public String getCoartada() {
-        return coartada;
+    public void setCulpable(boolean culpable) {
+        this.culpable = culpable;
+    }
+
+    public List<Pista> getPistasRelacionadas() {
+        return pistasRelacionadas;
+    }
+
+    public void setPistasRelacionadas(List<Pista> pistasRelacionadas) {
+        this.pistasRelacionadas = pistasRelacionadas;
     }
 }

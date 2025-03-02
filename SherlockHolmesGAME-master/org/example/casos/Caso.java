@@ -1,37 +1,57 @@
-package Policia;
+package org.example.casos;
+
+import org.example.personajes.Sospechoso;
+import org.example.personajes.Victima;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Caso {
-    private int id;
     private String titulo;
-    private String contexto;
-    private List<Sospechoso> listaSospechosos;
-    private List<Persona> listaPersonas;
-    private List<Objeto> listaObjetos;
-    private List<Pista> listaPistas;
-    private Informe informe;
+    private String descripcion;
+    private List<Sospechoso> sospechosos;
+    private Victima victima;
 
-    public Caso(int id, String titulo, String contexto) {
-        this.id = id;
+    public Caso(String titulo, String descripcion) {
         this.titulo = titulo;
-        this.contexto = contexto;
-        this.listaSospechosos = new ArrayList<>();
-        this.listaPersonas = new ArrayList<>();
-        this.listaObjetos = new ArrayList<>();
-        this.listaPistas = new ArrayList<>();
+        this.descripcion = descripcion;
+        this.sospechosos = new ArrayList<>();
+    }
+
+    // Getters y Setters
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public List<Sospechoso> getSospechosos() {
+        return sospechosos;
+    }
+
+    public void setSospechosos(List<Sospechoso> sospechosos) {
+        this.sospechosos = sospechosos;
+    }
+
+    public Victima getVictima() {
+        return victima;
+    }
+
+    public void setVictima(Victima victima) {
+        this.victima = victima;
     }
 
     public void agregarSospechoso(Sospechoso sospechoso) {
-        listaSospechosos.add(sospechoso);
-    }
-
-    public void agregarObjeto(Objeto objeto) {
-        listaObjetos.add(objeto);
-    }
-
-    public void agregarPista(Pista pista) {
-        listaPistas.add(pista);
+        sospechosos.add(sospechoso);
     }
 }

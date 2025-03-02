@@ -1,23 +1,32 @@
-import java.util.ArrayList;
-import java.util.List;
+package org.example.casos;
 
 public class Pista {
-    private String contexto;
-    private List<Objeto> listaObjetos;
+    private String descripcion;
+    private boolean encontrada;
 
-    public Pista(String contexto) {
-        this.contexto = contexto;
-        this.listaObjetos = new ArrayList<>();
+    public Pista(String descripcion) {
+        this.descripcion = descripcion;
+        this.encontrada = false;
     }
 
-    public void agregarObjeto(Objeto objeto) {
-        listaObjetos.add(objeto);
+    // Getters y Setters
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void mostrarPista() {
-        System.out.println("Pista: " + contexto);
-        for (Objeto obj : listaObjetos) {
-            System.out.println(" - " + obj.getNombre());
-        }
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public boolean isEncontrada() {
+        return encontrada;
+    }
+
+    public void setEncontrada(boolean encontrada) {
+        this.encontrada = encontrada;
+    }
+
+    public void marcarComoEncontrada() {
+        encontrada = true;
     }
 }

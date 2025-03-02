@@ -1,16 +1,13 @@
-import org.example.personajes.Persona;
+package org.example.comunicacion;
+
+import java.util.List;
 
 public class Telefono {
     private int numero;
-    private List<Persona> listaContactos;
-    private List<Chat> listaChats;
-    private List<Llamada> registroLlamadas;
+    private List<Chat> chats;
 
-    public void agregarContacto(Persona contacto) {
-        listaContactos.add(contacto);
-    }
-
-    public void iniciarLlamada(Persona destino) {
-        System.out.println("Llamando a " + destino.getName());
+    public Telefono(int numero, List<Chat> chats) {
+        this.numero = numero;
+        this.chats = chats;
     }
 }
